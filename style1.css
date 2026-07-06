@@ -95,3 +95,52 @@ REFER TO STYLE2PROJECT.CSS*/
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 768px) {
+    /* Ensure the container has side spacing */
+    .grid-container, .why-us {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* Add space between the boxes so they don't look glued together */
+    .card, .why-us > div > div {
+        margin-bottom: 20px !important;
+    }
+
+    /* Shrink that big title so it fits on one or two lines */
+    h2 {
+        font-size: 1.5rem !important;
+    }
+}
+/* The Animation Logic */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply this to your cards */
+.card {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+/* The Animation Logic */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply this to your cards */
+.card {
+    animation: fadeInUp 0.8s ease-out forwards;
+}

@@ -42,28 +42,99 @@ body { background: #f4f4f4; margin: 0; font-family: sans-serif; }
 
 /*FOR MEDIA QUERY*/
 /* Mobile Optimization */
+/* --- MOBILE OPTIMIZATION --- */
 @media (max-width: 768px) {
-    /* Stack the grid to 1 column instead of 3 */
-    .grid-container {
-        grid-template-columns: 1fr;
-        margin: 20px auto;
-        gap: 15px;
-    }
-
-    /* Adjust the header navigation for smaller screens */
+    /* 1. Header Cleanup */
     header nav {
         flex-direction: column;
         text-align: center;
+        padding: 10px;
     }
-
     header nav ul {
         flex-direction: column;
         gap: 10px;
         margin-top: 15px;
+        padding: 0;
     }
 
-    /* Make the Contact form stack properly */
-    main[style*="grid-template-columns: 1fr 1fr"] {
-        grid-template-columns: 1fr;
+    /* 2. Grid & Content Layout */
+    .grid-container, main {
+        grid-template-columns: 1fr !important;
+        padding: 0 20px !important;
+        margin: 20px auto !important;
     }
+
+    /* 3. Contact Form Vertical Alignment */
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    .contact-form, .contact-info {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    .contact-form input, 
+    .contact-form textarea, 
+    .contact-form button {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* 4. Spacing & Typography */
+    .card {
+        margin-bottom: 20px !important;
+    }
+    h2, h1 {
+        font-size: 1.5rem !important;
+    }
+
+    /* 5. Trigger Animation on Mobile */
+    .card {
+        animation: fadeUp 0.8s ease-out forwards;
+    }
+}
+
+/* Animation Keyframes (outside of media query) */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Desktop: Side-by-side */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Mobile: Stacked */
+@media (max-width: 768px) {
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .contact-form input, 
+    .contact-form textarea, 
+    .contact-form button {
+        width: 100% !important;
+    }
+}
+
+/* Base form styling */
+.contact-form input, .contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+.contact-form button {
+    background: #2ECC71;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
 }
