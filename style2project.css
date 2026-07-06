@@ -39,3 +39,31 @@ body { background: #f4f4f4; margin: 0; font-family: sans-serif; }
 .card img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 15px; border-radius: 2px; }
 .card h3 { color: #001F3F; margin: 10px 0; font-size: 1.1rem; }
 .card p { font-size: 0.9rem; color: #555; line-height: 1.4; }
+
+/*FOR MEDIA QUERY*/
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    /* Stack the grid to 1 column instead of 3 */
+    .grid-container {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+        gap: 15px;
+    }
+
+    /* Adjust the header navigation for smaller screens */
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    /* Make the Contact form stack properly */
+    main[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr;
+    }
+}

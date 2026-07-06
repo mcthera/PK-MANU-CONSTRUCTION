@@ -68,3 +68,30 @@ footer { background: #001F3F; color: white; text-align: center; padding: 2rem; m
 
 /* FOR PROJECT PAGE
 REFER TO STYLE2PROJECT.CSS*/
+/*FOR MEDIA QUERY*/
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    /* Stack the grid to 1 column instead of 3 */
+    .grid-container {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+        gap: 15px;
+    }
+
+    /* Adjust the header navigation for smaller screens */
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    /* Make the Contact form stack properly */
+    main[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr;
+    }
+}
