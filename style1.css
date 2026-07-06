@@ -16,6 +16,18 @@ nav img:hover{
     box-shadow: 0 10px 20px rgb(21, 179, 66);
     
 }
+.hero {
+    /* The first part is the gradient, the second is the image path */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 100px 20px;
+    text-align: center;
+    color: white; /* Ensure text color is light */
+}
 
 footer { background: #001F3F; color: white; text-align: center; padding: 2rem; margin-top: 2rem; }
 

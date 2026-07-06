@@ -11,7 +11,7 @@
 
     <header>
         <nav>
-            <div class="logo">P.K. CONSTRUCTION LIMITED</div>
+            <div class="logo"> <img src="P/logo.png" alt="logo picture"> CONSTRUCTION LIMITED</div>
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="projects.html">PROJECTS</a></li>
@@ -21,11 +21,6 @@
             </ul>
         </nav>
     </header>
-
-    <section class="page-title">
-        <p class="breadcrumb">HOME / CONTACT</p>
-        <h1>CONTACT US</h1>
-    </section>
 
     <main class="contact-main">
         <div class="contact-container">
@@ -40,22 +35,30 @@
 
             <div class="contact-form-side card">
                 <h2>SEND US A MESSAGE</h2>
-                <form>
-                    <label>Full Name</label>
-                    <input type="text" placeholder="John Doe">
-                    
-                    <label>Email Address</label>
-                    <input type="email" placeholder="john@example.com">
-                    
-                    <label>Project Details / Message</label>
-                    <textarea placeholder="Describe your construction project..."></textarea>
-                    
-                    <button type="submit">SUBMIT REQUEST</button>
-                </form>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="3b280af6-21ca-431c-8656-03356e9b1396">
+
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+            
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+            
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+            
+            <button type="submit">SUBMIT REQUEST</button>
+        </form>
             </div>
 
         </div>
     </main>
+            <a href="https://wa.me/233544662523?text=Hello would like to make an enquiry about a building project."
+   target="_blank" 
+   style="display: inline-block; padding: 15px 25px; background-color: #25D366; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px;">
+   Chat on WhatsApp
+        </a>
 
     <footer>
         <p>&copy; 2026 P.K. CONSTRUCTION LIMITED.</p>
